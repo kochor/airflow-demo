@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  # MySQL container name is airflow-backend
+  airflow-backend:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - airflow-backend-net
+    volumes:
+      - "airflow-backend:/var/lib/mysql"
+    env_file:
+      - mysql.env
+  airflow-engine:
+    build: ./airflow-demo
+    depends_on:
+     - airflow-backend
+    init: true
+    networks:
+     - airflow-backend-net
+    volumes:
+     - "airflow-engine:/root/airflow/"
+    ports:
+     - "8080:8080"
+    env_file:
+     - mysql.env
+networks:
+  airflow-backend-net:
+volumes:
+  airflow-engine:
+  airflow-backend:
+
