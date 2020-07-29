@@ -24,10 +24,10 @@ def main():
     # Convert alpha characters to numbers
     df['Phone'] = df['Phone']\
         .str.replace(r'[A-C]', "2")\
-        .str.replace(r'[D-F]', "3").str.replace(r'[G-I]', "3")\
-        .str.replace(r'[J-L]', "3").str.replace(r'[M-O]', "3")\
-        .str.replace(r'[P-S]', "3").str.replace(r'[T-V]', "3")\
-        .str.replace(r'[W-Z]', "3")
+        .str.replace(r'[D-F]', "3").str.replace(r'[G-I]', "4")\
+        .str.replace(r'[J-L]', "5").str.replace(r'[M-O]', "6")\
+        .str.replace(r'[P-S]', "7").str.replace(r'[T-V]', "8")\
+        .str.replace(r'[W-Z]', "9")
 
     # Remove everything that's not a number
     df['Phone'] = df['Phone'].str.replace(r'[^0-9]',"")
@@ -47,3 +47,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
