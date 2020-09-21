@@ -4,7 +4,6 @@ from sqlalchemy import create_engine
 import pandas as pd
 import os
 
-
 # TRANSFORMED
 def main():
     df = pd.read_csv("/root/airflow/demo_etl/people_data.csv", sep="\t")

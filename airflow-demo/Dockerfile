@@ -13,4 +13,3 @@ ENV PYTHONPATH=/root/airflow/data-pipelines/
 # Run bootstrap script
 RUN chmod +x airflow.sh
 CMD ./airflow.sh
-

@@ -5,6 +5,7 @@ from datetime import datetime
 
 import transform_contacts
 
+
 default_args = {
         "start_date": datetime(2020, 1, 1),
         "owner": "airflow"

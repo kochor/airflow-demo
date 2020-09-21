@@ -7,7 +7,7 @@ from sqlalchemy import String
 import os
 
 
-# Retrieve db user and password from env
+# Retrieve DB user and password from env
 # Using root user for demo
 db_user = 'root'
 db_pass = os.getenv('MYSQL_ROOT_PASSWORD')

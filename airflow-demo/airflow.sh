@@ -13,7 +13,7 @@ if [[ ! -f "$INIT_FILE" ]]; then
     while ! nc -z airflow-backend 3306; do
         sleep 1
     done
-    apt remove -y netcat
+    # apt remove -y netcat
 
     # Setup DB
     airflow initdb
